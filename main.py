@@ -8,7 +8,7 @@ while True:
     i=0
     proper_layout = ""
     used = []
-    def generate():
+    def generate(): #akdaskdladajdaldsaldadalkjaldkajdaldalkdjalkdjadjaldkjalkdjalkdjajdalkjdalkjdaljda
         def ogg(num):
             numx = num%8
             if used == []:
