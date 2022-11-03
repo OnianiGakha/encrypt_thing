@@ -57,6 +57,7 @@ while True:
             l+=1
 
     if b == "generate":
+        grid_layout = []
         generate()
         generated = True
         msg = input("encrypt: ")
