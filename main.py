@@ -5,7 +5,7 @@ grid_layout = []
 proper_layout = ""
 input_layout = []
 while True:
-    b = input()
+    b = input("Input: ")
     i=0
     proper_layout = ""
     used = []
@@ -18,12 +18,12 @@ while True:
             for p in used:
                 px = p%8
                 py = math.floor(p/8)
-                print("NUM = " + str(num) + " " + str(numx + 1) + " " + str(numy + 1))
+                #print("NUM = " + str(num) + " " + str(numx + 1) + " " + str(numy + 1))
 
                 if (numy == 7-py and numx == 7-px) or (numx == 7 - px and numy == py) or (numy == 7 - py and numx == px) or (numx == py and numy == 7 - px) or (numy == px and numx == 7 - py):
                     return False
-                else:
-                    print("P = " + str(p) + " " + str(px + 1) + " " + str(py + 1))
+                #else:   
+                    #print("P = " + str(p) + " " + str(px + 1) + " " + str(py + 1))
             return True
         for i in range(0,64):
             input_layout.append("▨")
@@ -82,14 +82,12 @@ while True:
         grid_layout = []
         generate()
         generated = True
-        msg = input("encrypt: ")
-        encrypt(msg,False)
     
     if b == "rotate":
         rotate()
 
     if b == "encrypt" and generated == True:
-        msg = input("encrypt: ")
+        msg = input("Encrypt: ")
         encrypt(msg,True)
 
     proper_layout = ""
@@ -119,5 +117,5 @@ while True:
         
         
     print(proper_layout)
-    print(input_layout)
-    print(grid_layout)
+    #print(input_layout)
+    #print(grid_layout)
