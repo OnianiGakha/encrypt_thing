@@ -4,6 +4,11 @@ generated = False
 grid_layout = []
 proper_layout = ""
 input_layout = []
+print("""
+generate - Generates a new grille
+rotate - Rotates the current grille
+encrypt - Encryps a message into the current grille
+""")
 while True:
     b = input("Input: ")
     i=0
@@ -115,7 +120,17 @@ while True:
             else:
                 proper_layout += "▨" + " "
         
-        
-    print(proper_layout)
+    if b == "help":
+        print("""
+        generate - Generates a new grille
+        rotate - Rotates the current grille
+        encrypt - Encryps a message into the current grille
+        """)
+    else:
+        if proper_layout != "":
+            print(proper_layout)
+        else:
+            print("You need to generate a grille first with the 'generate' command")
+
     #print(input_layout)
     #print(grid_layout)
